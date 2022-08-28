@@ -1,0 +1,14 @@
+
+
+	id			 		<- ID auto incrementado
+	nomeTecnico		 		<- Tecnico responsavel pelo atendimento ( CAMPO OPTIONS )
+	setorAtendimeneto	 		<- setores da empresa ( rastreamento - atendimento - acerto de contas - borracharia - CTe - Cargas - oficina - almoxarifado - Alertas - Caçamba - RH - Rotas - Psicologa - Deposito BV - Acerto de Contas - Checklist) ( CAMPO OPTIONS )
+	tipoDeAtendimento  		<- presencial ou remoto ( CAMPO OPTIONS )
+	classificacaoDeAssistencia 	<- Hardware ou software ( CAMPO OPTIONS )
+	motivoDaAssistencia 		<- Qual equipamento precisou de assitencia ( Software - impressora, computador - telefone de ramal - telefone movel - troca de cabo - monitor - Mouse ou teclado) ( CAMPO OPTIONS )
+	reclamacaoCliente			<- Qual o problema apresentado, ( CAMPO TEXTO )
+	observacao				<- ( CAMPO TEXTO )
+	dataEHora				<- Data e hora do registro da assistencia ( CAMPO DATETIME )
+
+	import assistencias from "./models/dadosAssistencia.js"
+	
