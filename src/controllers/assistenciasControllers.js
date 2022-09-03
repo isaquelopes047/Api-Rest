@@ -56,6 +56,16 @@ class assistenciaController {
         })
     }
 
+    static listarPorSetor = (req, res) => {
+        const setor = req.query.setorAtendimeneto
+
+        assistencias.find({'setorAtendimeneto': setor}, {}, (err, setorAtendimeneto) => {
+            res.status(200).send(setorAtendimeneto);
+        })
+    }
+
+    
+
 }
 
 export default assistenciaController 
