@@ -57,15 +57,28 @@ class assistenciaController {
     }
 
     static listarPorSetor = (req, res) => {
-        const setor = req.query.setorAtendimeneto
+        const setor = req.query.setorAtendimeneto 
 
         assistencias.find({'setorAtendimeneto': setor}, {}, (err, setorAtendimeneto) => {
             res.status(200).send(setorAtendimeneto);
         })
     }
 
-    
+    static listarPorOrder = (req, res) => {
+        const order = req.query.order;
 
+        assistencias.find({'order': order}, {}, (err, order) => {
+            res.status(200).send(order);
+        })
+    }
+
+    static deletaAssistenciaOrder = (req, res) => {
+        const order = req.query.order;
+
+        assistencias.findOneAndDelete({'order': order}, {}, (err, order) => {
+            res.status(200).send(order);
+        })
+    }
 }
 
 export default assistenciaController 
