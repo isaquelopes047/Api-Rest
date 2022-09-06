@@ -18,7 +18,7 @@ const assistenciaSchema = new mongoose.Schema(
         motivoDaAssistencia: {type: String, require: true},
         reclamacaoCliente: {type: String, require: true},
         observacao: {type: String, require: true},
-        dataEHora: {type: Date},
+        dataEHora: {type: String},
     }
 );
 
