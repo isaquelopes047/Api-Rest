@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-mongoose.connect("mongodb+srv://ti:1234@assistencia.rxixirm.mongodb.net/AssistenciaTI");
+mongoose.connect(process.env.DATABASE_URL || "mongodb+srv://ti:1234@assistencia.rxixirm.mongodb.net/AssistenciaTI");
 
 let db = mongoose.connection;
 
