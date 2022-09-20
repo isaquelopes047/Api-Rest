@@ -19,6 +19,7 @@ const assistenciaSchema = new mongoose.Schema(
         reclamacaoCliente: {type: String, require: true},
         observacao: {type: String, require: true},
         dataEHora: {type: String},
+        status: {type: String},
     }
 );
 
