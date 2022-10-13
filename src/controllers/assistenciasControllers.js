@@ -79,6 +79,14 @@ class assistenciaController {
             res.status(200).send(order);
         })
     }
+
+    static alterarAssistenciaOrder = (req, res) => {
+        const order = req.query.order;
+
+        assistencias.findOneAndUpdate({'order': order}, {$set: req.body}, (err, order) => {
+            res.status(200).send(order);
+        })
+    }
 }
 
 export default assistenciaController 

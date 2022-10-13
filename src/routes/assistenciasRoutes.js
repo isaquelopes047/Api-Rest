@@ -14,6 +14,7 @@ router
     .get('/assistencias', assistenciaController.listarAssistencias)
     .get('/assistencias/busca', assistenciaController.listarPorSetor)
     .get('/assistencias/lista', assistenciaController.listarPorOrder)
+    .patch('/assistencias/alterar', assistenciaController.alterarAssistenciaOrder)
     .delete('/assistencias/listaDelete', assistenciaController.deletaAssistenciaOrder)
     .get('/assistencias/:id', assistenciaController.listarAssistenciaPorId)
     .post('/assistencias', assistenciaController.cadastrarAssistencia)
