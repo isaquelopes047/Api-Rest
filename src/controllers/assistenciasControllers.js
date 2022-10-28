@@ -56,11 +56,19 @@ class assistenciaController {
         })
     }
 
-    static listarPorSetor = (req, res) => {
-        const setor = req.query.setorAtendimeneto 
+    static listarPorFuncionario = (req, res) => {
+        const nomeFuncionario = req.query.nomeFuncionario 
 
-        assistencias.find({'setorAtendimeneto': setor}, {}, (err, setorAtendimeneto) => {
-            res.status(200).send(setorAtendimeneto);
+        assistencias.find({'nomeFuncionario': nomeFuncionario}, {}, (err, nomeFuncionario) => {
+            res.status(200).send(nomeFuncionario);
+        })
+    }
+
+    static listarPorData = (req, res) => {
+        const dataEHora = req.query.dataEHora 
+
+        assistencias.find({'dataEHora': dataEHora}, {}, (err, dataEHora) => {
+            res.status(200).send(dataEHora);
         })
     }
 

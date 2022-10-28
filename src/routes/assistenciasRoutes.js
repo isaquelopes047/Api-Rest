@@ -12,11 +12,15 @@ router.use(cors({
 
 router
     .get('/assistencias', assistenciaController.listarAssistencias)
-    .get('/assistencias/busca', assistenciaController.listarPorSetor)
+    .get('/assistencias/busca', assistenciaController.listarPorFuncionario)
     .get('/assistencias/lista', assistenciaController.listarPorOrder)
+    .get('/assistencias/listaData', assistenciaController.listarPorData)
+
     .patch('/assistencias/alterar', assistenciaController.alterarAssistenciaOrder)
     .delete('/assistencias/listaDelete', assistenciaController.deletaAssistenciaOrder)
+
     .get('/assistencias/:id', assistenciaController.listarAssistenciaPorId)
+
     .post('/assistencias', assistenciaController.cadastrarAssistencia)
     .put('/assistencias/:id', assistenciaController.atualizarAssistencia)
     .delete('/assistencias/:id', assistenciaController.excluirAssistencia)
