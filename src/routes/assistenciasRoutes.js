@@ -14,6 +14,7 @@ router
     .get('/assistencias', assistenciaController.listarAssistencias)
     .get('/assistencias/busca', assistenciaController.listarPorFuncionario)
     .get('/assistencias/lista', assistenciaController.listarPorOrder)
+    .get('/assistencias/listarProblema', assistenciaController.listarProblemaIdentificado)
     .get('/assistencias/listaData', assistenciaController.listarPorData)
 
     .patch('/assistencias/alterar', assistenciaController.alterarAssistenciaOrder)

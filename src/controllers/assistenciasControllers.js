@@ -72,6 +72,14 @@ class assistenciaController {
         })
     }
 
+    static listarProblemaIdentificado = (req, res) => {
+        const problemaIdentificado = req.query.problemaIdentificado 
+
+        assistencias.find({'problemaIdentificado': problemaIdentificado}, {}, (err, problemaIdentificado) => {
+            res.status(200).send(problemaIdentificado);
+        })
+    }
+
     static listarPorOrder = (req, res) => {
         const order = req.query.order;
 
